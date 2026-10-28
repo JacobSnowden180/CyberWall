@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get started | CyberWall</title>
+<meta name="description" content="Join CyberWall early access. Tell us about your online store and a real person from our team will reply by email.">
+<meta name="theme-color" content="#0b1f3a">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CyberWall">
+<meta property="og:title" content="Get started | CyberWall">
+<meta property="og:description" content="Join CyberWall early access. Tell us about your online store and a real person from our team will reply by email.">
+<meta property="og:url" content="https://www.cyberwall.example/contact.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z' fill='%230b1f3a' stroke='%2310b981' stroke-width='3'/%3E%3Cpath d='M12 17h24M10.5 25h27M13 33h22M24 17v8M17 25v8M31 25v8M20 33v6M28 33v6' stroke='%235eead4' stroke-width='2' fill='none'/%3E%3C/svg%3E" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container bar">
+    <a class="brand" href="index.html" aria-label="CyberWall home"><svg viewBox="0 0 48 48" role="img" aria-label="CyberWall logo: a shield made of wall bricks" xmlns="http://www.w3.org/2000/svg"><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="#0b1f3a"/><g fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"><path d="M12 17h24M10.5 25h27M13 33h22"/><path d="M24 17v8M17 25v8M31 25v8M20 33v6M28 33v6"/></g><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Cyber<b>Wall</b></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span> Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a class="btn" href="contact.html" aria-current="page">Get early access</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Get started</span>
+    <h1>Talk to a real person</h1>
+    <p class="lead">Tell us a little about your store and a member of our team will get back to you by email. Joining early access doesn't commit you to anything.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="form-h">
+  <div class="container contact-grid">
+    <div class="card form-card">
+      <!--
+        IMPORTANT (developer note): this form is FRONT-END ONLY. It validates input in the browser (script.js)
+        and shows a friendly confirmation, but it does NOT send or store anything.
+        Before going live, connect it to a real backend, for example:
+          - Formspree: set  <form action="https://formspree.io/f/YOUR_ID" method="POST">  and submit via fetch/normal POST
+          - Netlify Forms: add  data-netlify="true" name="start"  and a hidden "form-name" input
+          - or a small PHP mail handler (e.g. contact-handler.php) that validates and emails the team
+        Then update the submit handler in script.js (see the TODO there). See README.md.
+      -->
+      <h2 id="form-h">Get early access</h2>
+      <form id="start-form" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error" required>
+          <p class="error" id="name-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error" required>
+          <p class="error" id="email-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="site">Your store's web address <span class="hint">(optional)</span></label>
+          <input id="site" name="site" type="text" inputmode="url" autocomplete="url" placeholder="www.yourstore.com" aria-describedby="site-error">
+          <p class="error" id="site-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="platform">What is your store built on?</label>
+          <select id="platform" name="platform" aria-describedby="platform-error" required>
+            <option value="">Please choose&hellip;</option>
+            <option>WooCommerce</option><option>WordPress</option><option>Magento</option><option>Shopware</option>
+            <option>Something else</option><option>Not sure</option>
+          </select>
+          <p class="error" id="platform-error" role="alert"></p>
+        </div>
+        <div class="field">
+          <label for="plan">Plan you're interested in <span class="hint">(optional)</span></label>
+          <select id="plan" name="plan">
+            <option value="">Not sure yet</option>
+            <option value="essentials">Essentials ($149 setup + $39/month)</option>
+            <option value="standard">Standard ($199 setup + $69/month)</option>
+            <option value="priority">Priority ($299 setup + $99/month)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Anything you'd like us to know? <span class="hint">(optional)</span></label>
+          <textarea id="message" name="message"></textarea>
+        </div>
+        <div class="field">
+          <div class="checkrow">
+            <input id="consent" name="consent" type="checkbox" aria-describedby="consent-error">
+            <label for="consent">It's okay for the CyberWall team to email me about early access.</label>
+          </div>
+          <p class="error" id="consent-error" role="alert"></p>
+        </div>
+        <button class="btn" type="submit">Join early access</button>
+        <p class="small" style="margin-top:1rem">We'll only use your details to reply to you about CyberWall.</p>
+      </form>
+      <div id="thanks" class="success" tabindex="-1" role="status" hidden>
+        <h2>Thank you, <span id="thanks-name"></span>!</h2>
+        <p>Thanks for your interest in CyberWall. A member of our team will be in touch by email.</p>
+        <p class="small"><strong>Demo note:</strong> this website preview doesn't send messages yet, so nothing has been delivered. The form needs a backend before launch (see README).</p>
+        <p><a href="index.html">Back to the home page</a></p>
+      </div>
+    </div>
+
+    <aside aria-label="Other ways to reach us">
+      <div class="card">
+        <h3>Prefer to email?</h3>
+        <p><a href="mailto:hello@cyberwall.example">hello@cyberwall.example</a></p>
+        <p class="small"><span class="badge">Placeholder</span> This address is an example and isn't monitored yet. It will be replaced with a real one before launch.</p>
+      </div>
+      <div class="card" style="margin-top:1.25rem">
+        <h3>What happens next?</h3>
+        <ol style="padding-left:1.2rem;margin:0">
+          <li>A real person reads your message.</li>
+          <li>We reply by email and ask any questions about your store.</li>
+          <li>If it looks like a good fit, we agree a start date. No pressure.</li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><svg viewBox="0 0 48 48" role="img" aria-label="CyberWall logo: a shield made of wall bricks" xmlns="http://www.w3.org/2000/svg"><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="#0b1f3a"/><g fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"><path d="M12 17h24M10.5 25h27M13 33h22"/><path d="M24 17v8M17 25v8M31 25v8M20 33v6M28 33v6"/></g><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Cyber<b>Wall</b></span></a>
+        <p style="margin-top:.8rem;max-width:26rem">A mostly-human security team that keeps your online store's security up to date, safely.</p>
+        <p class="small">CyberWall is in early access. We're a new service, and we'd rather be upfront about that.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Get started</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Talk to a real person</h2>
+        <p><a href="mailto:hello@cyberwall.example">hello@cyberwall.example</a><br><span class="small">(placeholder address while we're in early access)</span></p>
+        <p><a href="contact.html">Join early access</a></p>
+      </div>
+    </div>
+    <div class="legal"><span>&copy; 2026 CyberWall</span><span>Early access &middot; Launch pricing may change</span></div>
+  </div>
+</footer>
+</body>
+</html>
