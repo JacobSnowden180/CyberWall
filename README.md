@@ -62,4 +62,7 @@ Upload the folder as-is. No build command. Publish directory `.`.
 
 ## Accessibility
 
-Semantic regions, one `h1` per page, skip link, `aria-current` on the current page, and a navy focus ring (white on the navy bands). Form errors use a summary that takes focus. The FAQ uses `<details>`. `prefers-reduced-motion` turns off the small button lift and the smooth transitions. On a phone the nav collapses into a Menu button. With JavaScript off, the links stay on the page. Colours stay in the original navy, teal, and mint set, checked for WCAG AA text.
+Semantic HTML (header/nav/main/footer, headings in order), skip link, `aria-current` on the active nav item, visible focus outlines, form labels and error messages announced with `role="alert"`, `<details>` FAQ, `prefers-reduced-motion` respected, colours chosen for AA text contrast. Mobile-first CSS; the nav collapses into a Menu button on small screens (and stays visible if JavaScript is off).
+
+
+_Access test from Societas (Matthew Coppola), 2026-10-31._
