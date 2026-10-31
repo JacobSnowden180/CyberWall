@@ -3,208 +3,309 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CyberWall | Real people protecting your online store</title>
-<meta name="description" content="CyberWall is a mostly-human security team for small online stores. We test security fixes on a private copy first, then update your live store and tell you in plain English.">
-<meta name="theme-color" content="#0b1f3a">
+<title>CyberWall | Store security updates, tested first</title>
+<meta name="description" content="CyberWall is a mostly human team for WooCommerce, WordPress, Magento, and Shopware stores. We test each fix on a private copy, then update the live store.">
+<link rel="canonical" href="https://www.cyberwall.example/">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#241c18">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CyberWall">
-<meta property="og:title" content="CyberWall | Real people protecting your online store">
-<meta property="og:description" content="CyberWall is a mostly-human security team for small online stores. We test security fixes on a private copy first, then update your live store and tell you in plain English.">
-<meta property="og:url" content="https://www.cyberwall.example/index.html">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z' fill='%230b1f3a' stroke='%2310b981' stroke-width='3'/%3E%3Cpath d='M12 17h24M10.5 25h27M13 33h22M24 17v8M17 25v8M31 25v8M20 33v6M28 33v6' stroke='%235eead4' stroke-width='2' fill='none'/%3E%3C/svg%3E" type="image/svg+xml">
+<meta property="og:title" content="CyberWall | Store security updates, tested first">
+<meta property="og:description" content="CyberWall is a mostly human team for WooCommerce, WordPress, Magento, and Shopware stores. We test each fix on a private copy, then update the live store.">
+<meta property="og:url" content="https://www.cyberwall.example/">
+<meta property="og:image" content="https://www.cyberwall.example/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CyberWall. Security updates for small online stores, tested by a person first.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CyberWall | Store security updates, tested first">
+<meta name="twitter:description" content="CyberWall is a mostly human team for WooCommerce, WordPress, Magento, and Shopware stores. We test each fix on a private copy, then update the live store.">
+<meta name="twitter:image" content="https://www.cyberwall.example/og.png">
+<meta name="twitter:image:alt" content="CyberWall. Security updates for small online stores, tested by a person first.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+<script src="script.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container bar">
-    <a class="brand" href="index.html" aria-label="CyberWall home"><svg viewBox="0 0 48 48" role="img" aria-label="CyberWall logo: a shield made of wall bricks" xmlns="http://www.w3.org/2000/svg"><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="#0b1f3a"/><g fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"><path d="M12 17h24M10.5 25h27M13 33h22"/><path d="M24 17v8M17 25v8M31 25v8M20 33v6M28 33v6"/></g><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Cyber<b>Wall</b></span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span> Menu</button>
+    <a class="brand" href="index.html"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#f6f1e7" d="M16 3 5 7.5v8.2c0 6.4 4.4 11.2 11 12.8 6.6-1.6 11-6.4 11-12.8V7.5L16 3z"/><path fill="none" stroke="#6f2c24" stroke-width="1.4" stroke-linecap="square" d="M10 12.2h12M9.2 16.2h13.6M10.6 20.2h10.8M16 12.2v4M12.4 16.2V20.2M19.6 16.2V20.2"/></svg><span>Cyber<b>Wall</b></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span> <span class="nav-toggle-text">Menu</span></button>
+    <a class="header-cta mobile-only" href="contact.html">Request early access</a>
     <nav id="site-nav" class="nav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a class="header-cta desktop-only" href="contact.html">Request early access</a>
+    </nav>
+    <noscript>
+      <nav class="noscript-nav" aria-label="Pages">
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="pricing.html">Pricing</a>
         <a href="about.html">About</a>
-        <a class="btn" href="contact.html">Get early access</a>
-    </nav>
+        <a href="contact.html">Request early access</a>
+      </nav>
+    </noscript>
   </div>
 </header>
-<main id="main">
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">A mostly-human security team for online stores</span>
-      <h1>Real people protecting your online store, before the next hack makes the news.</h1>
-      <p class="lead">CyberWall is a small team of real security people who watch for new security holes, test each fix on a private copy of your store, then apply it to your live store and write you a plain-English note about what we did.</p>
-      <div class="btn-row">
-        <a class="btn" href="contact.html">Get early access</a>
-        <a class="btn secondary" href="#how">See how it works</a>
+<main id="main" tabindex="-1">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div>
+        <p class="kicker">Early access for small PHP stores</p>
+        <h1 id="hero-title">Security updates for your store, tested by a person before they go live.</h1>
+        <p class="lead">CyberWall watches for new security holes in the software behind small shops on WooCommerce, WordPress, Magento, and Shopware. We try each fix on a private copy, check that customers can still pay, then update the live store and send a short note in plain English.</p>
+        <div class="btn-row">
+          <a class="btn" href="contact.html">Request early access</a>
+          <a href="#how">How a fix reaches your store</a>
+        </div>
+        <p class="fine">You do not need to be technical. Asking for early access does not sign you up. Proposed prices start at $39 a month plus setup. <a href="#prices">See the three plans</a>.</p>
       </div>
-      <p class="note">For small businesses running WooCommerce, WordPress, Magento or Shopware. No technical knowledge needed. Talk to a real person any time.</p>
-    </div>
-    <div class="mock" role="img" aria-label="Illustration: a checklist showing a fix tested on a private copy, checkout checked, applied to the live store, and a note sent to the owner">
-      <div class="mock-head"><span>How we handle a new security hole</span><small>Illustration</small></div>
-      <div class="mock-body" aria-hidden="true">
-        <ul class="checklist">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><strong>We spot it.</strong><br><span class="small">Our people track new security news every day.</span></span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><strong>We test it on a copy.</strong><br><span class="small">A private copy of your store, not the real one.</span></span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><strong>We check checkout.</strong><br><span class="small">Add to cart. Pay. Does it all still work?</span></span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><strong>We fix your live store.</strong><br><span class="small">With a rollback ready, just in case.</span></span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><strong>We tell you, simply.</strong><br><span class="small">A short note from a real person on our team.</span></span></li>
-        </ul>
+      <div class="ticket">
+        <p class="kicker">The sequence</p>
+        <h2>When a new hole shows up</h2>
+        <ol class="ticket-steps">
+          <li><span class="num" aria-hidden="true">01</span><div><h3>A person reads it</h3><p>We decide whether it affects your store. Tools help us watch. A person makes the call.</p></div></li>
+          <li><span class="num" aria-hidden="true">02</span><div><h3>We try the fix on a copy</h3><p>A private copy, not the shop your customers use. If it breaks, only the copy is affected.</p></div></li>
+          <li><span class="num" aria-hidden="true">03</span><div><h3>We place a test order</h3><p>Add to cart and pay. A secure shop that cannot take an order is not finished.</p></div></li>
+          <li><span class="num" aria-hidden="true">04</span><div><h3>We update the live store</h3><p>A rollback, an undo back to the last good version, is prepared first.</p></div></li>
+          <li><span class="num" aria-hidden="true">05</span><div><h3>We write to you</h3><p>What was wrong, what we did, and whether you need to do anything.</p></div></li>
+        </ol>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="trust" aria-label="What you can count on">
-  <div class="container">
-    <ul>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Run by real people</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Tested on a copy first</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Plain-English updates</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg> Rollback ready</li>
-    </ul>
-  </div>
-</section>
+  <section class="platform-band" aria-label="Stores this service is built for">
+    <div class="container">
+      <p class="band-label">Built for small stores on</p>
+      <ul>
+        <li>WooCommerce</li>
+        <li>WordPress</li>
+        <li>Magento</li>
+        <li>Shopware</li>
+      </ul>
+    </div>
+  </section>
 
-<section class="section" aria-labelledby="what-h">
-  <div class="container">
-    <div class="center">
-      <span class="eyebrow">What we do</span>
-      <h2 id="what-h">An extra protective step for your store, handled by people</h2>
-      <p class="lead">When someone discovers a security hole in the software your store is built on, there's a fix, but applying it carelessly can break your checkout. CyberWall adds a careful step in the middle: <strong>we test first, so you don't have to gamble.</strong></p>
-    </div>
-    <div class="grid three" style="margin-top:2.5rem">
-      <div class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><h3>People do the work</h3><p>Real security people watch the news, make the decisions and write to you. Monitoring tools help us keep watch, but people are in charge.</p></div>
-      <div class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></span><h3>Try it on a copy first</h3><p>We test every fix on a private copy of your store, so a bad update never touches your live checkout.</p></div>
-      <div class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7v6h6"/><path d="M3.5 13A9 9 0 1 0 6 6.3L3 9"/></svg></span><h3>Always a way back</h3><p>If something unexpected happens, a rollback (a quick &ldquo;undo&rdquo; to the last good version) is always ready.</p></div>
-    </div>
-    <p class="center" style="margin-top:2rem"><a href="services.html">See everything we do &rarr;</a></p>
-  </div>
-</section>
-
-<section class="section soft" id="why-now" aria-labelledby="why-h">
-  <div class="container">
-    <span class="eyebrow">Why this matters now</span>
-    <h2 id="why-h">A real example from this month: &ldquo;PHP2Shell&rdquo;</h2>
-    <p class="lead">PHP is the behind-the-scenes software that powers a huge number of online stores, including WooCommerce, WordPress, Magento and Shopware. In October 2026, two serious security holes were found in PHP itself.</p>
-    <div class="facts">
-      <div class="fact"><b>Patched on 21 Oct 2026</b>Two flaws (CVE-2026-109618 and CVE-2026-109619), each rated 9.2 out of 10 for severity, got a fix from the PHP team.</div>
-      <div class="fact"><b>Very wide reach</b>They affect PHP going back to version 5.4, so the software behind many stores, even when a store's own code is perfectly clean.</div>
-      <div class="fact"><b>Not fixed by plugin updates</b>Updating your store's plugins won't fix this. The PHP software on the server has to be updated.</div>
-    </div>
-    <p>Early attack attempts were reported before the fix was public, and researchers have since shown working code execution against test servers. At the same time, security firm Sansec notes that attacks need specific conditions to work, so this isn't a reason to panic. It <em>is</em> a good reason to make sure someone is on top of it.</p>
-    <p><strong>This is exactly the kind of moment CyberWall exists for.</strong> Our team notices news like this early, works out what it means for your type of store, tests the fix on a private copy first, checks that checkout still works, and then helps get it onto your live store, with a plain-English note so you know what happened.</p>
-    <p class="small"><strong>Sources:</strong> Sansec Forensics Team, &ldquo;PHP2Shell: PHP RCE (CVE-2026-109618, CVE-2026-109619)&rdquo;, 21 Oct 2026 (<a href="https://sansec.io/research/php2shell" rel="noopener">sansec.io</a>); reporting from SecurityWeek; US CISA vulnerability notices; and the PHP project's own release announcement (PHP Foundation / php.net). A &ldquo;CVE&rdquo; is just the public ID number given to a known security hole.</p>
-  </div>
-</section>
-
-<section class="section" id="how" aria-labelledby="how-h">
-  <div class="container">
-    <div class="center">
-      <span class="eyebrow">How it works</span>
-      <h2 id="how-h">Four simple steps</h2>
-      <p class="lead">You don't need to understand the technical side. Here's what happens.</p>
-    </div>
-    <ol class="steps" style="margin-top:2.5rem">
-      <li><h3>Connect your site</h3><p>We do a one-time health check and set things up with you, step by step.</p></li>
-      <li><h3>We watch</h3><p>Our team follows new security news every day and works out what matters for your store.</p></li>
-      <li><h3>We test on a copy</h3><p>Fixes are tried on a private copy first, including a test of your checkout.</p></li>
-      <li><h3>We fix and tell you</h3><p>We update your live store and send you a short, plain-English note.</p></li>
-    </ol>
-  </div>
-</section>
-
-<section class="section" aria-labelledby="sample-h">
-  <div class="container split">
-    <div>
-      <span class="eyebrow">What you'll hear from us</span>
-      <h2 id="sample-h">A short, plain-English note after every fix</h2>
-      <p class="lead">No jargon, no wall of technical text. Just what we found, what we did, and that your checkout still works.</p>
-      <p class="small">The message on the right is an <strong>example</strong> written to show the style. It is not from a real customer.</p>
-    </div>
-    <div>
-      <p><span class="badge">Example message</span></p>
-      <article class="email" aria-label="Example update message">
-        <div class="meta"><strong>From:</strong> The CyberWall team<br><strong>Subject:</strong> We updated your store's security (nothing for you to do)</div>
-        <div class="msg">
-          <p>Hi Sam,</p>
-          <p>A security hole was announced this week in part of the software your store runs on. Here's what happened:</p>
-          <ul>
-            <li>We tested the fix on a private copy of your store first.</li>
-            <li>We placed a test order from start to finish. Cart and payment both worked.</li>
-            <li>We applied the fix to your live store this morning, and checked it afterwards.</li>
+  <section class="section" aria-labelledby="expect-title">
+    <div class="container">
+      <h2 id="expect-title">A fix can break checkout. Skipping it can leave a door open.</h2>
+      <p class="lead">CyberWall is the careful step in the middle, for an owner who has a shop to run rather than a security team. People do the watching, the decisions, and the writing. Monitoring tools and standard checks help. This is not a claim that no automation is used, and it is not a claim that a store cannot be broken into.</p>
+      <div class="split">
+        <div>
+          <h3>What you can expect</h3>
+          <ul class="plain-list">
+            <li>Someone follows security news for the software your store uses.</li>
+            <li>Fixes are tried on a private copy first.</li>
+            <li>Checkout is tested after the change.</li>
+            <li>A rollback is prepared before the live update.</li>
+            <li>You get a plain-English note, not a raw log.</li>
           </ul>
-          <p>Your customers wouldn't have noticed a thing. A rollback was ready the whole time, and we didn't need it.</p>
-          <p>Questions? Just reply to this email and a real person will answer.<br>&mdash; The CyberWall team</p>
+        </div>
+        <div>
+          <h3>What we will not claim</h3>
+          <ul class="plain-list">
+            <li>That your store cannot be hacked. No one can promise that.</li>
+            <li>That a plugin update fixes every problem. Some fixes, including PHP itself, have to be done by the host.</li>
+            <li>That we replace backups, good passwords, or your hosting company.</li>
+            <li>That we are a large firm. This is early access, and we would rather say so.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="how" aria-labelledby="how-title">
+    <div class="container">
+      <p class="kicker">From the day you write</p>
+      <h2 id="how-title">Four steps, and then we do the watching</h2>
+      <ol class="steps">
+        <li><span class="num" aria-hidden="true">01</span><h3>You write</h3><p>A person replies. Early access is a conversation. It does not commit you to a plan, and nothing is billed on this website.</p></li>
+        <li><span class="num" aria-hidden="true">02</span><h3>We agree access</h3><p>If it is a fit, we do a one-time health check with you and agree what access is needed. We will not ask you to email a password.</p></li>
+        <li><span class="num" aria-hidden="true">03</span><h3>We set up the copy</h3><p>We make the private copy and the checkout test. If your host has to change the PHP version, we say what to ask them, and we test against that version first.</p></li>
+        <li><span class="num" aria-hidden="true">04</span><h3>We keep watch</h3><p>After that we watch, test, update, and write. Plans are month to month.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="sample-title">
+    <div class="container split">
+      <div>
+        <p class="kicker">What you would read</p>
+        <h2 id="sample-title">A short note after a fix, in plain English</h2>
+        <p class="lead">No jargon without a plain explanation. The message is an example of the tone. It is not from a real customer, and Sam is not a client.</p>
+      </div>
+      <article class="note-sample" aria-label="Example update message">
+        <p class="note-flag">Example message</p>
+        <dl class="note-meta">
+          <div><dt>From</dt><dd>The CyberWall team</dd></div>
+          <div><dt>Subject</dt><dd>We updated your store's security. Nothing for you to do.</dd></div>
+        </dl>
+        <div class="note-body">
+          <p>Hi Sam,</p>
+          <p>A security hole was announced this week in software your store runs on. Here is what we did:</p>
+          <ul>
+            <li>Tested the fix on a private copy of your store first.</li>
+            <li>Placed a test order from the cart through payment. Both worked.</li>
+            <li>Applied the fix to the live store this morning and checked it afterwards.</li>
+          </ul>
+          <p>Customers would not have seen a change. A rollback was ready the whole time, and we did not need it.</p>
+          <p>Reply to this email if you want to talk to a person.<br>The CyberWall team</p>
         </div>
       </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section soft" aria-labelledby="aware-h">
-  <div class="container split">
-    <div>
-      <span class="eyebrow">Worried? That's normal.</span>
-      <h2 id="aware-h">Most owners underestimate what a break-in costs</h2>
-      <p class="lead">You're running a business, not a security lab. It's understandable to hope nothing happens, but it helps to know the real numbers.</p>
+  <section class="section section-alt" id="php2shell" aria-labelledby="php-title">
+    <div class="container measure">
+      <p class="kicker">A real week, October 2026</p>
+      <h2 id="php-title">PHP2Shell, and what it means for a shop</h2>
+      <p>PHP is the software underneath many stores, including WooCommerce, WordPress, Magento, and Shopware. In October 2026 two serious holes were found in PHP itself. Their public IDs are CVE-2026-109618 and CVE-2026-109619. A CVE is the public number given to a known security hole. Each is scored 9.2 on the CVSS scale, which rates them critical.</p>
+      <dl class="facts">
+        <div><dt>Patched</dt><dd>21 October 2026. CISA's alert that day names the fixed releases PHP 8.5.12, 8.4.27, 8.3.36, and 8.2.35.</dd></div>
+        <div><dt>Wide reach</dt><dd>The bugs go back to PHP 5.4, so a store can be affected even when its own code and plugins are fine.</dd></div>
+        <div><dt>Not a plugin fix</dt><dd>Updating plugins does not fix this. The PHP version on the server has to change, and that is often something only the host can do.</dd></div>
+      </dl>
+      <p>Attack attempts were reported before the fix was public. Researchers have reproduced the bugs in test environments. Sansec also says an attack needs specific knowledge of the server and specific conditions on it, so this is not automatic for every shop, and it is not a reason to panic. It is a reason to have someone check what it means for yours.</p>
+      <p>CISA's advice, if a server cannot be updated quickly or is still on PHP 8.1 or older, is to take that PHP system offline until it is patched or upgraded. That decision sits with you and your host. We can help you prepare what to ask them.</p>
+      <p>This is the kind of week CyberWall is for: notice it, work out whether your store is affected, test on a private copy, check checkout, and help get the right PHP version onto the live server, with a short note about what happened.</p>
+      <p class="small">Sources: Sansec Forensics Team, <a href="https://sansec.io/research/php2shell">“PHP2Shell: PHP RCE (CVE-2026-109618, CVE-2026-109619)”</a>, 21 October 2026. CISA, <a href="https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching">“Critical Vulnerabilities in PHP Require Immediate Patching”</a>, 21 October 2026.</p>
     </div>
-    <div class="card">
-      <p>In a 2024 survey by Nationwide, most small business owners thought a cyber attack would cost them <strong>under $5,000</strong>, while real insurance claims averaged around <strong>$18,000 to $21,000</strong>.</p>
-      <p class="small">Source: Nationwide small business survey, 2024. Figures are from that survey and are shown for context. They are not a prediction for any particular business.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" aria-labelledby="people-h">
-  <div class="container grid two" style="align-items:start">
-    <div>
-      <span class="eyebrow">Who's behind it</span>
-      <h2 id="people-h">A small, founder-led team you can actually talk to</h2>
-      <p>CyberWall is run by people who follow vulnerability news closely and care about getting fixes to small stores quickly and safely. When you write to us, a person writes back.</p>
-      <p><a href="about.html">More about us &rarr;</a></p>
+  <section class="section" aria-labelledby="cost-title">
+    <div class="container split">
+      <div>
+        <p class="kicker">A published figure</p>
+        <h2 id="cost-title">Owners often expect a smaller bill than the claims show</h2>
+        <p class="lead">This is context from an insurer's own survey, not a forecast for your shop, and not a scare. CyberWall is not insurance.</p>
+      </div>
+      <div class="callout">
+        <p>In a Nationwide release from September 2024, 81% of small-business owners thought a cyber attack would cost less than $5,000. Nationwide's claims data put the average small-business cyber claim at about $18,000 to $21,000.</p>
+        <p class="small">Source: <a href="https://news.nationwide.com/one-quarter-of-small-business-owners-have-been-targeted-by-ai-driven-scams/">Nationwide, “One quarter of small business owners have been targeted by AI-driven scams”</a>, September 2024. Figures are from that release. They are not a prediction for any one business.</p>
+      </div>
     </div>
-    <div class="placeholder"><strong>Customer stories coming soon.</strong><br>We're a new service in early access, so we don't have customer stories to share yet. We'd rather wait than make any up.</div>
-  </div>
-</section>
+  </section>
 
-<section class="cta-band" aria-labelledby="cta-h">
-  <div class="container">
-    <h2 id="cta-h">Want a real person looking after your store's security?</h2>
-    <p style="max-width:40rem;margin:0 auto">We're opening early access to a small number of stores. Tell us a little about yours and a member of our team will get back to you.</p>
-    <div class="btn-row"><a class="btn light" href="contact.html">Join early access</a><a class="btn secondary" href="pricing.html">See launch pricing</a></div>
-  </div>
-</section>
+  <section class="section section-alt" aria-labelledby="who-title">
+    <div class="container split">
+      <div>
+        <p class="kicker">Who does the work</p>
+        <h2 id="who-title">A small, founder-led team</h2>
+        <p>CyberWall is early access and founder-led. The aim is to follow vulnerability news closely and turn the items that matter into careful fixes for small stores, explained in plain English. When you write, a person is supposed to write back. Names and photos are not on this site yet.</p>
+        <p><a href="about.html">How the team works</a></p>
+      </div>
+      <aside class="placeholder">
+        <p class="kicker">Placeholder</p>
+        <p><strong>Customer stories are not up yet.</strong> There are none we can publish. We will not invent quotes, logos, or a client list.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="prices" aria-labelledby="prices-title">
+    <div class="container">
+      <p class="kicker">US dollars, month to month</p>
+      <h2 id="prices-title">Proposed launch prices</h2>
+      <div class="callout callout-warn">
+        <p><strong>Not a final rate card.</strong> These are the proposed early-access prices. They may change before the service is open to everyone. Target reply times are not set yet, so none are printed here.</p>
+      </div>
+      <div class="plans">
+        <article class="plan" id="essentials">
+          <h3>Essentials</h3>
+          <p class="price"><span class="amount">$39</span> <span class="per">/ month</span></p>
+          <p class="setup">$149 one-time setup</p>
+          <p class="plan-for">One small shop getting started.</p>
+          <a class="btn" href="contact.html?plan=essentials">Request early access</a>
+        </article>
+        <article class="plan" id="standard">
+          <h3>Standard</h3>
+          <p class="price"><span class="amount">$69</span> <span class="per">/ month</span></p>
+          <p class="setup">$199 one-time setup</p>
+          <p class="plan-for">Essentials, plus a check for hidden card-stealing code after each fix.</p>
+          <a class="btn" href="contact.html?plan=standard">Request early access</a>
+        </article>
+        <article class="plan" id="priority">
+          <h3>Priority</h3>
+          <p class="price"><span class="amount">$99</span> <span class="per">/ month</span></p>
+          <p class="setup">$299 one-time setup</p>
+          <p class="plan-for">Standard, plus a person reviewing every update. Up to 3 stores.</p>
+          <a class="btn" href="contact.html?plan=priority">Request early access</a>
+        </article>
+      </div>
+      <p class="fine plan-follow"><a href="pricing.html">The pricing page lists what each plan includes</a>, what the setup fee covers, and the questions people ask.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt faq" aria-labelledby="faq-title">
+    <div class="container">
+      <h2 id="faq-title">Questions</h2>
+      <div>
+        <details>
+          <summary><span class="q">Do I need to be technical?</span> <span class="mark" aria-hidden="true"></span></summary>
+          <p>No. We do the technical work and explain it in plain English. If we need something from you, we say what it is and how to do it.</p>
+        </details>
+        <details>
+          <summary><span class="q">Do you guarantee my store will not be hacked?</span> <span class="mark" aria-hidden="true"></span></summary>
+          <p>No. Nobody honestly can. We reduce risk by fixing known holes quickly and carefully, with a test copy, a checkout check, and a rollback prepared. We do not replace backups, passwords, or your host.</p>
+        </details>
+        <details>
+          <summary><span class="q">What if an update would break the store?</span> <span class="mark" aria-hidden="true"></span></summary>
+          <p>That is why the fix is tried on a private copy first. If it causes trouble there, it does not go onto the live store. A person tells you, and we look for a safer way. If something unexpected happens after a live update, the rollback is there.</p>
+        </details>
+        <details>
+          <summary><span class="q">Does early access commit me to a plan?</span> <span class="mark" aria-hidden="true"></span></summary>
+          <p>No. It is a request for a conversation. We are opening early access to a small number of stores so each one can be looked after properly. This website does not take payment.</p>
+        </details>
+      </div>
+      <p><a href="pricing.html#faq">More questions, including hosting, access, and where a test copy lives</a></p>
+    </div>
+  </section>
+
+  <section class="cta-band" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">Ask a person to look at your store</h2>
+      <p>Tell us what the shop runs on. Early access is for a small number of stores, and it does not commit you to a plan.</p>
+      <p><a class="btn" href="contact.html">Request early access</a></p>
+      <p class="fine"><a href="pricing.html">Read the proposed prices first</a></p>
+    </div>
+  </section>
 </main>
 <footer class="site-footer">
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <a class="brand" href="index.html"><svg viewBox="0 0 48 48" role="img" aria-label="CyberWall logo: a shield made of wall bricks" xmlns="http://www.w3.org/2000/svg"><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="#0b1f3a"/><g fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"><path d="M12 17h24M10.5 25h27M13 33h22"/><path d="M24 17v8M17 25v8M31 25v8M20 33v6M28 33v6"/></g><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Cyber<b>Wall</b></span></a>
-        <p style="margin-top:.8rem;max-width:26rem">A mostly-human security team that keeps your online store's security up to date, safely.</p>
-        <p class="small">CyberWall is in early access. We're a new service, and we'd rather be upfront about that.</p>
-      </div>
-      <nav aria-label="Footer">
-        <h2>Explore</h2>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Get started</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h2>Talk to a real person</h2>
-        <p><a href="mailto:hello@cyberwall.example">hello@cyberwall.example</a><br><span class="small">(placeholder address while we're in early access)</span></p>
-        <p><a href="contact.html">Join early access</a></p>
-      </div>
+  <div class="container foot-grid">
+    <div>
+      <a class="brand" href="index.html"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#f6f1e7" d="M16 3 5 7.5v8.2c0 6.4 4.4 11.2 11 12.8 6.6-1.6 11-6.4 11-12.8V7.5L16 3z"/><path fill="none" stroke="#6f2c24" stroke-width="1.4" stroke-linecap="square" d="M10 12.2h12M9.2 16.2h13.6M10.6 20.2h10.8M16 12.2v4M12.4 16.2V20.2M19.6 16.2V20.2"/></svg><span>Cyber<b>Wall</b></span></a>
+      <p>A mostly human team that updates a small store's security, then tells the owner what changed.</p>
+      <p class="small">Early access. No customer count, certifications, or reviews are published because there are none to publish yet.</p>
     </div>
-    <div class="legal"><span>&copy; 2026 CyberWall</span><span>Early access &middot; Launch pricing may change</span></div>
+    <nav aria-label="Footer">
+      <p class="foot-title">Pages</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Request early access</a></li>
+        <li><a href="legal.html">Privacy and terms</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="foot-title">Early access</p>
+      <p><a href="contact.html">Request early access</a></p>
+      <address>
+        <a href="mailto:hello@cyberwall.example">hello@cyberwall.example</a><br>
+        <span class="small">Placeholder address. Not monitored yet.</span>
+      </address>
+    </div>
+  </div>
+  <div class="container legal-row">
+    <p>&copy; 2026 CyberWall</p>
+    <p>No legal name, phone, or postal address published yet. Proposed prices, not a final rate card.</p>
   </div>
 </footer>
 </body>

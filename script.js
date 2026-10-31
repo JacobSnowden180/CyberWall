@@ -1,86 +1,179 @@
-/* CyberWall — small vanilla JS: mobile nav, plan prefill, contact form validation. */
+/* CyberWall — mobile nav and early-access form checks.
+   Keep this file in the document head, not deferred: the first line
+   marks the page as JS-capable before the body is painted. */
 (function () {
   document.documentElement.classList.add('js');
 
-  // Mobile nav toggle
-  var toggle = document.querySelector('.nav-toggle');
-  var nav = document.getElementById('site-nav');
-  if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && nav.classList.contains('open')) {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
-      }
-    });
+  function boot() {
+    initForm();
+    initNav();
   }
 
-  // Contact form (front-end only; see the note in contact.html and README.md)
-  var form = document.getElementById('start-form');
-  if (!form) return;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
 
-  // Pre-select plan from ?plan=essentials|standard|priority
-  var params = new URLSearchParams(window.location.search);
-  var plan = params.get('plan');
-  var planSel = document.getElementById('plan');
-  if (plan && planSel) {
-    for (var i = 0; i < planSel.options.length; i++) {
-      if (planSel.options[i].value === plan) { planSel.selectedIndex = i; }
+  function initNav() {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    var label = toggle.querySelector('.nav-toggle-text');
+
+    function setOpen(open, returnFocus) {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (label) label.textContent = open ? 'Close' : 'Menu';
+      if (!open && returnFocus) toggle.focus();
+    }
+
+    toggle.addEventListener('click', function () {
+      setOpen(!nav.classList.contains('open'), false);
+    });
+
+    nav.addEventListener('click', function (event) {
+      if (event.target.closest('a')) setOpen(false, false);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && nav.classList.contains('open')) {
+        setOpen(false, true);
+      }
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!nav.classList.contains('open')) return;
+      if (nav.contains(event.target) || toggle.contains(event.target)) return;
+      setOpen(false, false);
+    });
+
+    if (window.matchMedia) {
+      var desktop = window.matchMedia('(min-width: 900px)');
+      if (desktop.addEventListener) {
+        desktop.addEventListener('change', function (event) {
+          if (event.matches) setOpen(false, false);
+        });
+      }
     }
   }
 
-  var rules = {
-    name: function (v) { return v.trim() ? '' : 'Please tell us your name so we know who to reply to.'; },
-    email: function (v) {
-      if (!v.trim()) return 'Please enter your email address so we can reply.';
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'That email address doesn\u2019t look quite right. Could you check it?';
-    },
-    site: function (v) {
-      if (!v.trim()) return '';
-      return /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}(\/.*)?$/i.test(v.trim()) ? '' : 'That web address doesn\u2019t look quite right. Example: www.yourstore.com';
-    },
-    platform: function (v) { return v ? '' : 'Please choose what your store is built on. \u201CNot sure\u201D is a fine answer.'; },
-    consent: function (checked) { return checked ? '' : 'Please tick this box so we know it\u2019s okay to reply to you.'; }
-  };
+  function initForm() {
+    var form = document.getElementById('start-form');
+    if (!form) return;
 
-  function validateField(id) {
-    var el = document.getElementById(id);
-    var msg = rules[id](id === 'consent' ? el.checked : el.value);
-    var wrap = el.closest('.field');
-    var err = document.getElementById(id + '-error');
-    wrap.classList.toggle('invalid', !!msg);
-    err.textContent = msg;
-    if (msg) { el.setAttribute('aria-invalid', 'true'); } else { el.removeAttribute('aria-invalid'); }
-    return msg;
-  }
+    var plans = {
+      essentials: 'Essentials',
+      standard: 'Standard',
+      priority: 'Priority'
+    };
+    var planField = document.getElementById('plan');
+    var planNote = document.getElementById('plan-note');
+    var selected = new URLSearchParams(window.location.search).get('plan');
+    if (selected && plans[selected] && planField) {
+      planField.value = selected;
+      if (planNote) {
+        planNote.hidden = false;
+        planNote.textContent = 'This page pre-selected the ' + plans[selected] + ' plan because of the link you followed. You can change it.';
+      }
+    }
 
-  Object.keys(rules).forEach(function (id) {
-    var el = document.getElementById(id);
-    el.addEventListener('blur', function () { validateField(id); });
-    el.addEventListener('input', function () {
-      if (el.closest('.field').classList.contains('invalid')) validateField(id);
-    });
-  });
+    var rules = {
+      name: function (value) {
+        return value.trim() ? '' : 'Enter your name so a reply has someone to address.';
+      },
+      email: function (value) {
+        if (!value.trim()) return 'Enter an email address so a reply has somewhere to go.';
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()) ? '' : 'That email address does not look complete. Check the spelling.';
+      },
+      site: function (value) {
+        if (!value.trim()) return '';
+        return /^(https?:\/\/)?([a-z0-9-]+\.)+[a-z]{2,}([\/?#].*)?$/i.test(value.trim())
+          ? ''
+          : 'That web address does not look complete. Example: www.yourstore.com';
+      },
+      platform: function (value) {
+        return value ? '' : 'Choose what the store is built on. “Not sure” is a fine answer.';
+      },
+      consent: function (checked) {
+        return checked ? '' : 'Tick the box if the team may email you about early access.';
+      }
+    };
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var firstBad = null;
+    function field(id) {
+      return document.getElementById(id);
+    }
+
+    function validateField(id) {
+      var el = field(id);
+      var message = rules[id](id === 'consent' ? el.checked : el.value);
+      var wrap = el.closest('.field');
+      var error = document.getElementById(id + '-error');
+      wrap.classList.toggle('invalid', !!message);
+      error.textContent = message;
+      if (message) el.setAttribute('aria-invalid', 'true');
+      else el.removeAttribute('aria-invalid');
+      return message;
+    }
+
     Object.keys(rules).forEach(function (id) {
-      if (validateField(id) && !firstBad) firstBad = document.getElementById(id);
+      var el = field(id);
+      el.addEventListener('blur', function () { validateField(id); });
+      el.addEventListener('input', function () {
+        if (el.closest('.field').classList.contains('invalid')) validateField(id);
+      });
+      el.addEventListener('change', function () {
+        if (el.closest('.field').classList.contains('invalid')) validateField(id);
+      });
     });
-    if (firstBad) { firstBad.focus(); return; }
 
-    // TODO (before launch): send the form data to a real backend here
-    // (Formspree, Netlify Forms, or a PHP mail handler). Right now nothing is sent anywhere.
+    var summary = document.getElementById('error-summary');
+    var summaryList = document.getElementById('error-list');
     var thanks = document.getElementById('thanks');
-    var name = document.getElementById('name').value.trim().split(' ')[0];
-    document.getElementById('thanks-name').textContent = name;
-    form.hidden = true;
-    thanks.hidden = false;
-    thanks.focus();
-  });
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var problems = [];
+      Object.keys(rules).forEach(function (id) {
+        var message = validateField(id);
+        if (message) problems.push({ id: id, message: message });
+      });
+
+      if (problems.length) {
+        summaryList.textContent = '';
+        problems.forEach(function (problem) {
+          var item = document.createElement('li');
+          var link = document.createElement('a');
+          link.href = '#' + problem.id;
+          link.textContent = problem.message;
+          link.addEventListener('click', function (clickEvent) {
+            clickEvent.preventDefault();
+            field(problem.id).focus();
+          });
+          item.appendChild(link);
+          summaryList.appendChild(item);
+        });
+        summary.hidden = false;
+        summary.focus();
+        return;
+      }
+
+      summary.hidden = true;
+      var first = field('name').value.trim().split(/\s+/)[0];
+      document.getElementById('thanks-name').textContent = first;
+      form.hidden = true;
+      thanks.hidden = false;
+      thanks.focus();
+    });
+
+    var edit = document.getElementById('edit-answers');
+    if (edit) {
+      edit.addEventListener('click', function () {
+        thanks.hidden = true;
+        form.hidden = false;
+        field('name').focus();
+      });
+    }
+  }
 })();

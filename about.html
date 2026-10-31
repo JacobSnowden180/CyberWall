@@ -3,119 +3,162 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About | CyberWall</title>
-<meta name="description" content="CyberWall is a founder-led, mostly-human security team for small online stores. Plain language, safe changes, no scare tactics. Currently in early access.">
-<meta name="theme-color" content="#0b1f3a">
+<title>About CyberWall, a small human team</title>
+<meta name="description" content="CyberWall is a founder-led, mostly human security team for small online stores. Plain language, careful updates, no scare tactics. Now in early access.">
+<link rel="canonical" href="https://www.cyberwall.example/about.html">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#241c18">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CyberWall">
-<meta property="og:title" content="About | CyberWall">
-<meta property="og:description" content="CyberWall is a founder-led, mostly-human security team for small online stores. Plain language, safe changes, no scare tactics. Currently in early access.">
+<meta property="og:title" content="About CyberWall, a small human team">
+<meta property="og:description" content="CyberWall is a founder-led, mostly human security team for small online stores. Plain language, careful updates, no scare tactics. Now in early access.">
 <meta property="og:url" content="https://www.cyberwall.example/about.html">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z' fill='%230b1f3a' stroke='%2310b981' stroke-width='3'/%3E%3Cpath d='M12 17h24M10.5 25h27M13 33h22M24 17v8M17 25v8M31 25v8M20 33v6M28 33v6' stroke='%235eead4' stroke-width='2' fill='none'/%3E%3C/svg%3E" type="image/svg+xml">
+<meta property="og:image" content="https://www.cyberwall.example/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CyberWall. Security updates for small online stores, tested by a person first.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About CyberWall, a small human team">
+<meta name="twitter:description" content="CyberWall is a founder-led, mostly human security team for small online stores. Plain language, careful updates, no scare tactics. Now in early access.">
+<meta name="twitter:image" content="https://www.cyberwall.example/og.png">
+<meta name="twitter:image:alt" content="CyberWall. Security updates for small online stores, tested by a person first.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+<script src="script.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="container bar">
-    <a class="brand" href="index.html" aria-label="CyberWall home"><svg viewBox="0 0 48 48" role="img" aria-label="CyberWall logo: a shield made of wall bricks" xmlns="http://www.w3.org/2000/svg"><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="#0b1f3a"/><g fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"><path d="M12 17h24M10.5 25h27M13 33h22"/><path d="M24 17v8M17 25v8M31 25v8M20 33v6M28 33v6"/></g><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Cyber<b>Wall</b></span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span> Menu</button>
+    <a class="brand" href="index.html"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#f6f1e7" d="M16 3 5 7.5v8.2c0 6.4 4.4 11.2 11 12.8 6.6-1.6 11-6.4 11-12.8V7.5L16 3z"/><path fill="none" stroke="#6f2c24" stroke-width="1.4" stroke-linecap="square" d="M10 12.2h12M9.2 16.2h13.6M10.6 20.2h10.8M16 12.2v4M12.4 16.2V20.2M19.6 16.2V20.2"/></svg><span>Cyber<b>Wall</b></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="bars" aria-hidden="true"></span> <span class="nav-toggle-text">Menu</span></button>
+    <a class="header-cta mobile-only" href="contact.html">Request early access</a>
     <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a class="header-cta desktop-only" href="contact.html">Request early access</a>
+    </nav>
+    <noscript>
+      <nav class="noscript-nav" aria-label="Pages">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="pricing.html">Pricing</a>
-        <a href="about.html" aria-current="page">About</a>
-        <a class="btn" href="contact.html">Get early access</a>
-    </nav>
+        <a href="about.html">About</a>
+        <a href="contact.html">Request early access</a>
+      </nav>
+    </noscript>
   </div>
 </header>
-<main id="main">
-<section class="page-hero">
-  <div class="container">
-    <span class="eyebrow">About CyberWall</span>
-    <h1>A human-run team that looks after your store's security</h1>
-    <p class="lead">CyberWall is a mostly-human security service: our people do the watching, the deciding and the writing, supported by monitoring tools to help us keep up.</p>
-  </div>
-</section>
-
-<section class="section" aria-labelledby="story-h">
-  <div class="container grid two" style="align-items:start">
-    <div>
-      <h2 id="story-h">Why we exist</h2>
-      <p>CyberWall is founder-led. Our founder follows vulnerability news closely and aims to learn about new security holes as they emerge, sometimes before the major public trackers list them, and to turn that into fixes quickly.</p>
-      <p>Big companies have security teams. Small shops usually have a plugin and some hope. We think small businesses deserve real people on their side, who explain things in plain language and don't make them feel silly for asking.</p>
+<main id="main" tabindex="-1">
+  <section class="page-hero">
+    <div class="container">
+      <p class="kicker">About</p>
+      <h1>People, not a plugin you install and forget</h1>
+      <p class="lead">CyberWall is a mostly human security service. People do the watching, the deciding, and the writing. Monitoring tools and standard checks help them keep up. We do not claim the work is free of automation, and we do not claim it is a guarantee.</p>
     </div>
-    <div class="callout">
-      <h3>Our mission</h3>
-      <p>Help small online businesses stay safe by fixing known security holes quickly, carefully and in plain English.</p>
+  </section>
+
+  <section class="section" aria-labelledby="story-title">
+    <div class="container split">
+      <div class="measure">
+        <h2 id="story-title">Why this exists</h2>
+        <p>CyberWall is founder-led. The founder follows vulnerability news and wants small stores to get a careful fix, explained in plain English, including on weeks when the hole is in PHP itself rather than in a plugin.</p>
+        <p>The aim is to notice relevant news early, sometimes before the major public trackers list it. That is a goal. It is not a promise that we will always hear first.</p>
+        <p>Large companies have security staff. A small shop often has a plugin and some hope. The bet behind CyberWall is that those shops should be able to talk to a person who will not make them feel foolish for asking.</p>
+      </div>
+      <blockquote class="mission">
+        <p>Help small online businesses stay safer by fixing known security holes quickly, carefully, and in plain English.</p>
+      </blockquote>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section soft" aria-labelledby="val-h">
-  <div class="container">
-    <h2 id="val-h" class="center">What we value</h2>
-    <div class="grid three" style="margin-top:2rem">
-      <div class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span><h3>Plain language</h3><p>If we can't explain it simply, we haven't explained it well. No jargon without a plain explanation.</p></div>
-      <div class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></span><h3>Safe changes</h3><p>We test first, check your checkout, and keep a way back. Careful beats fast when your customers are paying.</p></div>
-      <div class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v13H8l-4 4V4Z"/><path d="M8 9h8M8 13h5"/></svg></span><h3>No scare tactics</h3><p>We'll tell you what's real and what matters, and we won't invent urgency to sell you something.</p></div>
+  <section class="section section-alt" aria-labelledby="values-title">
+    <div class="container">
+      <h2 id="values-title">What we value</h2>
+      <div class="value-list">
+        <article>
+          <h3>Plain language</h3>
+          <p>If we cannot explain it simply, we have not explained it. Jargon gets a plain version beside it.</p>
+        </article>
+        <article>
+          <h3>Safe changes</h3>
+          <p>Test first, check checkout, keep a way back. Careful beats fast when customers are paying.</p>
+        </article>
+        <article>
+          <h3>No scare tactics</h3>
+          <p>We will say what is real and what it means for a shop. We will not invent urgency to sell a plan.</p>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section" aria-labelledby="how-h">
-  <div class="container grid two" style="align-items:start">
-    <div>
-      <h2 id="how-h">How we work</h2>
-      <p>People make the decisions and do the work at CyberWall. We use monitoring tools to help us keep watch and standard checks to help us test, the same way any careful professional uses good equipment. When it matters, a person looks at it.</p>
-      <p>On our Priority plan, a real person reviews every update. On other plans, our team reviews and monitors, and routine updates are handled with our standard tools and checks.</p>
+  <section class="section" aria-labelledby="work-title">
+    <div class="container split">
+      <div>
+        <h2 id="work-title">How the work is split</h2>
+        <p>People make the decisions. Monitoring tools help us keep watch, and standard checks help us test, the way a careful trade uses good instruments.</p>
+        <p>On Priority, a person reviews every update before it goes live. On Essentials and Standard, the team reviews and monitors, routine updates use standard checks, and a person reviews a change that is large or that touches payment.</p>
+        <p><a href="services.html">The full list of what that means</a></p>
+      </div>
+      <aside class="placeholder">
+        <p class="kicker">Placeholder</p>
+        <p><strong>Team bios are not up yet.</strong> This is a new early-access service. We will not put up invented names, photos, headcounts, or credentials.</p>
+      </aside>
     </div>
-    <div class="placeholder"><strong>Meet the team: bios coming soon.</strong><br>We're a new, early-access service and will introduce the team here when we're ready. We won't put up made-up names or photos in the meantime.</div>
-  </div>
-</section>
+  </section>
 
-<section class="section soft" aria-labelledby="early-h">
-  <div class="container center">
-    <h2 id="early-h">We're just getting started</h2>
-    <p class="lead">CyberWall is a new business launching with early access. That means small numbers, close attention, and your feedback shaping what we build. We'd rather say that plainly than pretend to be bigger than we are.</p>
-  </div>
-</section>
+  <section class="section section-alt" aria-labelledby="early-title">
+    <div class="container measure">
+      <h2 id="early-title">Early, and small on purpose</h2>
+      <p>CyberWall is launching with early access for a small number of stores. That means close attention, and the first shops will shape how the service works. We would rather say that than pretend to be bigger than we are.</p>
+      <p>There is no client list, no certification badge, and no review score on this site. Those would be fiction today.</p>
+    </div>
+  </section>
 
-<section class="cta-band" aria-labelledby="cta-h">
-  <div class="container">
-    <h2 id="cta-h">Want a real person looking after your store's security?</h2>
-    <p style="max-width:40rem;margin:0 auto">We're opening early access to a small number of stores. Tell us a little about yours and a member of our team will get back to you.</p>
-    <div class="btn-row"><a class="btn light" href="contact.html">Join early access</a><a class="btn secondary" href="pricing.html">See launch pricing</a></div>
-  </div>
-</section>
+  <section class="cta-band" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">Ask a person to look at your store</h2>
+      <p>Early access does not commit you to a plan.</p>
+      <p><a class="btn" href="contact.html">Request early access</a></p>
+      <p class="fine"><a href="pricing.html">Read the proposed prices first</a></p>
+    </div>
+  </section>
 </main>
 <footer class="site-footer">
-  <div class="container">
-    <div class="foot-grid">
-      <div>
-        <a class="brand" href="index.html"><svg viewBox="0 0 48 48" role="img" aria-label="CyberWall logo: a shield made of wall bricks" xmlns="http://www.w3.org/2000/svg"><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="#0b1f3a"/><g fill="none" stroke="#5eead4" stroke-width="2" stroke-linecap="round"><path d="M12 17h24M10.5 25h27M13 33h22"/><path d="M24 17v8M17 25v8M31 25v8M20 33v6M28 33v6"/></g><path d="M24 3 6 10v13c0 11 7.6 19.3 18 22 10.4-2.7 18-11 18-22V10L24 3Z" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linejoin="round"/></svg><span>Cyber<b>Wall</b></span></a>
-        <p style="margin-top:.8rem;max-width:26rem">A mostly-human security team that keeps your online store's security up to date, safely.</p>
-        <p class="small">CyberWall is in early access. We're a new service, and we'd rather be upfront about that.</p>
-      </div>
-      <nav aria-label="Footer">
-        <h2>Explore</h2>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Get started</a></li>
-        </ul>
-      </nav>
-      <div>
-        <h2>Talk to a real person</h2>
-        <p><a href="mailto:hello@cyberwall.example">hello@cyberwall.example</a><br><span class="small">(placeholder address while we're in early access)</span></p>
-        <p><a href="contact.html">Join early access</a></p>
-      </div>
+  <div class="container foot-grid">
+    <div>
+      <a class="brand" href="index.html"><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="#f6f1e7" d="M16 3 5 7.5v8.2c0 6.4 4.4 11.2 11 12.8 6.6-1.6 11-6.4 11-12.8V7.5L16 3z"/><path fill="none" stroke="#6f2c24" stroke-width="1.4" stroke-linecap="square" d="M10 12.2h12M9.2 16.2h13.6M10.6 20.2h10.8M16 12.2v4M12.4 16.2V20.2M19.6 16.2V20.2"/></svg><span>Cyber<b>Wall</b></span></a>
+      <p>A mostly human team that updates a small store's security, then tells the owner what changed.</p>
+      <p class="small">Early access. No customer count, certifications, or reviews are published because there are none to publish yet.</p>
     </div>
-    <div class="legal"><span>&copy; 2026 CyberWall</span><span>Early access &middot; Launch pricing may change</span></div>
+    <nav aria-label="Footer">
+      <p class="foot-title">Pages</p>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Request early access</a></li>
+        <li><a href="legal.html">Privacy and terms</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="foot-title">Early access</p>
+      <p><a href="contact.html">Request early access</a></p>
+      <address>
+        <a href="mailto:hello@cyberwall.example">hello@cyberwall.example</a><br>
+        <span class="small">Placeholder address. Not monitored yet.</span>
+      </address>
+    </div>
+  </div>
+  <div class="container legal-row">
+    <p>&copy; 2026 CyberWall</p>
+    <p>No legal name, phone, or postal address published yet. Proposed prices, not a final rate card.</p>
   </div>
 </footer>
 </body>
