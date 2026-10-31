@@ -61,3 +61,6 @@ Any static host works; upload the folder contents as-is.
 ## Accessibility and responsiveness
 
 Semantic HTML (header/nav/main/footer, headings in order), skip link, `aria-current` on the active nav item, visible focus outlines, form labels and error messages announced with `role="alert"`, `<details>` FAQ, `prefers-reduced-motion` respected, colours chosen for AA text contrast. Mobile-first CSS; the nav collapses into a Menu button on small screens (and stays visible if JavaScript is off).
+
+
+_Access test from Societas (Matthew Coppola), 2026-10-31._
