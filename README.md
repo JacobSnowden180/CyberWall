@@ -16,7 +16,7 @@ Small-business owners who are not security people. The offer is a person who wat
 
 | File | What it is |
 |---|---|
-| `index.html` | Home: the offer, the sequence, how joining works, an example note, PHP2Shell, a sourced cost figure, proposed prices, a short FAQ |
+| `index.html` | Home: the offer, how a fix is handled, four steps, an example note, PHP2Shell, a sourced cost figure |
 | `services.html` | What the team does, which plan includes it, who it is and is not for |
 | `pricing.html` | Proposed Essentials / Standard / Priority prices, setup, a rough market comparison, FAQ |
 | `about.html` | Why the service exists, values, how human review differs by plan, team placeholder |
@@ -30,7 +30,7 @@ Small-business owners who are not security people. The offer is a person who wat
 | `_headers`, `_redirects` | Netlify and Cloudflare Pages: security headers, and `/index.html` → `/` |
 | `vercel.json` | The same security headers, for Vercel |
 
-The logo is an inline SVG (a shield on navy, with teal course lines). No image CDN and no tracker. Colors live in custom properties at the top of `style.css`: navy, white, cool slate, a sky tint, and one teal accent.
+The look matches the original site: navy, teal, and mint, white header, rounded cards. The logo is the same inline shield. Colors, type, spacing, and radii are custom properties at the top of `style.css`. No image CDN and no tracker.
 
 ## Deploy
 
@@ -62,4 +62,4 @@ Upload the folder as-is. No build command. Publish directory `.`.
 
 ## Accessibility
 
-Semantic regions, one `h1` per page, skip link, `aria-current` on the current page, visible `:focus-visible` outlines (navy on white, white on the navy header), form errors with a summary that takes focus, `<details>` FAQ, and `prefers-reduced-motion` respected. The menu works from the keyboard (Escape closes it). With JavaScript off, a plain list of links is still in the header. Colours were chosen for WCAG AA text contrast. The early-access button stays on screen on small phones, not only inside the menu.
+Semantic regions, one `h1` per page, skip link, `aria-current` on the current page, and a navy focus ring (white on the navy bands). Form errors use a summary that takes focus. The FAQ uses `<details>`. `prefers-reduced-motion` turns off the small button lift and the smooth transitions. On a phone the nav collapses into a Menu button. With JavaScript off, the links stay on the page. Colours stay in the original navy, teal, and mint set, checked for WCAG AA text.
