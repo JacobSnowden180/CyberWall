@@ -30,7 +30,7 @@ Small-business owners who are not security people. The offer is a person who wat
 | `_headers`, `_redirects` | Netlify and Cloudflare Pages: security headers, and `/index.html` → `/` |
 | `vercel.json` | The same security headers, for Vercel |
 
-The logo is an inline SVG (a shield of brick courses). No image CDN and no tracker.
+The logo is an inline SVG (a shield on navy, with teal course lines). No image CDN and no tracker. Colors live in custom properties at the top of `style.css`: navy, white, cool slate, a sky tint, and one teal accent.
 
 ## Deploy
 
@@ -62,4 +62,4 @@ Upload the folder as-is. No build command. Publish directory `.`.
 
 ## Accessibility
 
-Semantic regions, one `h1` per page, skip link, `aria-current` on the current page, visible `:focus-visible` outlines (ink on paper, paper on the dark header), form errors with a summary that takes focus, `<details>` FAQ, and `prefers-reduced-motion` respected. The menu works from the keyboard (Escape closes it). With JavaScript off, a plain list of links is still in the header. Colours were chosen for WCAG AA text contrast. The early-access button stays on screen on small phones, not only inside the menu.
+Semantic regions, one `h1` per page, skip link, `aria-current` on the current page, visible `:focus-visible` outlines (navy on white, white on the navy header), form errors with a summary that takes focus, `<details>` FAQ, and `prefers-reduced-motion` respected. The menu works from the keyboard (Escape closes it). With JavaScript off, a plain list of links is still in the header. Colours were chosen for WCAG AA text contrast. The early-access button stays on screen on small phones, not only inside the menu.
